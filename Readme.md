@@ -158,8 +158,8 @@ The server connects to MongoDB before listening on `http://localhost:3000`.
 **Request Body:**
 ```json
 {
-  "username": "shivam",
-  "email": "shivam@example.com",
+  "username": "maheshyadav",
+  "email": "mahesh@example.com",
   "password": "yourpassword"
 }
 ```
@@ -181,7 +181,7 @@ The server connects to MongoDB before listening on `http://localhost:3000`.
 **Request Body:**
 ```json
 {
-  "email": "shivam@example.com",
+  "email": "mahesh@example.com",
   "password": "yourpassword"
 }
 ```
@@ -210,8 +210,8 @@ Authorization: Bearer your_jwt_token
 {
   "user": {
     "_id": "...",
-    "username": "shivam",
-    "email": "shivam@example.com"
+    "username": "maheshyadav",
+    "email": "mahesh@example.com"
   }
 }
 ```
@@ -301,4 +301,4 @@ This project is open-source and free to use for personal and educational purpose
 
 ---
 
-> Built with ❤️ by **Shivam Chaudhary**
+> Built with ❤️ by **Mahesh Yadav**
