@@ -6,7 +6,7 @@ A RESTful URL Shortener backend built with **Node.js**, **Express**, and **Mongo
 
 ## 👨‍💻 Developed By
 
-**Shivam Chaudhary**
+**Mahesh Yadav**
 
 ---
 
