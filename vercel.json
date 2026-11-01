@@ -24,7 +24,7 @@
       "destination": "/"
     },
     {
-      "source": "/:shortId",
+      "source": "/:shortId([^\\.]+)",
       "destination": "/api/index.js"
     }
   ]
