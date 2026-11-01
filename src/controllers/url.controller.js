@@ -19,10 +19,15 @@ const shorturl = async (req, res) => {
         redirectURL: redirectURL
     });
 
-    return res.status(201).json({
-        message: `New url is http://localhost:3000/${shortId}`
-    });
+    const protocol = req.headers["x-forwarded-proto"] || req.protocol || "http";
+    const host = req.get("host") || "localhost:3000";
+    const fullShortUrl = `${protocol}://${host}/${shortId}`;
 
+    return res.status(201).json({
+        message: `New url is ${fullShortUrl}`,
+        shortUrl: fullShortUrl,
+        shortId
+    });
 };
 
 
@@ -33,12 +38,7 @@ const redirecting = async (req, res, next) => {
         const entry = await URL.findOne({ sorturlid: shortId });
 
         if (!entry) {
-            if (typeof next === "function") {
-                return next();
-            }
-            return res.status(404).json({
-                message: "No data found"
-            });
+            return res.redirect("/");
         }
 
         res.redirect(entry.redirectURL);
